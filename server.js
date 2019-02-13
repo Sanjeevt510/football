@@ -15,11 +15,13 @@ const app = setupExpress();
 function setupExpress() {
     const app = express();
     const server = http.createServer(app);
+    const io    =   socketIO(server);
 
     server.listen(PORT, () => {
         console.log(`server listing on port ${PORT}`);
     });
     configureExpress(app);
+    require('./mytest/chats')(io);
 
     // add set of router
     const router = require('express-promise-router')();
