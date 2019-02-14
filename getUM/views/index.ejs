@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>SAM Introduction to WebRTC</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/custom/handlerequest.js"></script>
+    </head>
+    <body>
+
+    <video id="myVideoTag" autoplay></video>
+    <video id="theirVideoTag" autoplay></video>
+    <div>
+        <label>Your Name</label><input id="myName" type="text"/>
+        <label>Message</label><input id="myMessage" type="text"/>
+        <input id="sendMessage" type="submit"/>
+        <div id="chatArea">Message Output:</br></div>
+        <div id="signalingArea">Signaling Messages:</br></div>
+    </div>
+    <%= test%>
+</body>
+</html>
