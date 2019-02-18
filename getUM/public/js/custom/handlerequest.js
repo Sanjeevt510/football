@@ -3,6 +3,7 @@
 			var myName = document.querySelector("#myName");
 			var myMessage = document.querySelector("#myMessage");
 			var sendMessage = document.querySelector("#sendMessage");
+	//	var sendMessage = document.getElementById('#sendMessage');
 			var chatArea = document.querySelector("#chatArea");
 			var signalingArea = document.querySelector("#signalingArea");
 			var ROOM = "chat";
@@ -15,8 +16,10 @@
 			var rtcPeerConn;
 			var io     =   io();
 			io = io.connect();
-
-			io.emit('ready', {"chat_room": ROOM, "signal_room": SIGNAL_ROOM});
+			let readyParams = {"chat_room": ROOM, "signal_room": SIGNAL_ROOM}
+			io.emit('ready', readyParams, function(){
+				console.log("user joined the channel/Room from callback:",readyParams.chat_room);
+			});
 			
 			//Send a first signaling message to anyone listening
 			//This normally would be on a button click
