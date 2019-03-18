@@ -44,6 +44,6 @@ function configureExpress(app) {
 }
 
 
-console.log(`testing of package football and js file server.js`);
+console.log(`testing of package football and is git involve js file server.js`);
 
 });
