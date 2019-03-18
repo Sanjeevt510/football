@@ -5,7 +5,7 @@ module.exports = {
     
     filterMethod: function (getEvent) {
         let methodnameGet = lowerCase(getEvent.methodname);
-        pp = new Process()    
+        pp = new Process();    
         if (methodnameGet === "ticketoperation") {
           
             console.log('inside the if methods');
